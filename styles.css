@@ -1,58 +1,394 @@
+/* ---------- Base ---------- */
+:root {
+    --navy: #002349;
+    --navy-dark: #001630;
+    --red: #d9232d;
+    --red-dark: #b81c25;
+    --light: #f4f7f6;
+    --text: #333;
+}
+
+* { box-sizing: border-box; }
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: var(--text);
     line-height: 1.6;
 }
+
+img { max-width: 100%; }
+
+a { color: inherit; }
+
 .container {
     width: 85%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 0;
 }
-header {
-    background: #002349;
+
+/* ---------- Header / nav ---------- */
+.site-header {
+    background: var(--navy);
     color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 10px 0;
 }
-.hero {
-    background: #f4f7f6;
-    padding: 60px 0;
-    text-align: center;
-    border-bottom: 3px solid #d9232d;
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
 }
-.hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+
+.nav-logo {
+    height: 44px;
+    width: auto;
+    border-radius: 4px;
 }
+
+.site-header nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.site-header nav a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.site-header nav a:not(.btn):hover { color: #ff9ea3; }
+
+/* ---------- Buttons ---------- */
 .btn {
     display: inline-block;
-    background: #d9232d;
+    background: var(--red);
     color: #fff;
     padding: 12px 24px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 4px;
     margin-top: 20px;
+    transition: background 0.2s, transform 0.2s;
 }
+
+.btn:hover {
+    background: var(--red-dark);
+    transform: translateY(-2px);
+}
+
+.btn-small {
+    margin-top: 0;
+    padding: 8px 18px;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #fff;
+    padding: 10px 22px;
+}
+
+.btn-outline:hover { background: rgba(255, 255, 255, 0.15); }
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* ---------- Hero ---------- */
+/* Put your photo at images/hero.jpg. If it is missing, the navy gradient shows instead. */
+.hero {
+    background:
+        url('images/hero.jpg') center / cover no-repeat,
+        linear-gradient(135deg, var(--navy) 0%, #0a3a73 100%);
+    border-bottom: 4px solid var(--red);
+    color: #fff;
+    text-align: center;
+}
+
+.hero-overlay {
+    background: linear-gradient(rgba(0, 22, 48, 0.72), rgba(0, 22, 48, 0.82));
+    padding: 90px 0;
+}
+
+.hero-content { padding: 0; }
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    color: #ff9ea3;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    line-height: 1.15;
+    margin: 0 0 15px;
+}
+
+.hero-sub {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    color: #e6edf5;
+}
+
+/* ---------- Trust strip ---------- */
+.trust-strip {
+    background: var(--light);
+    border-bottom: 1px solid #e1e6e5;
+}
+
+.trust-items {
+    display: flex;
+    justify-content: space-around;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 18px 0;
+    font-weight: 600;
+    color: var(--navy);
+    text-align: center;
+}
+
+.trust-items span::before {
+    content: "\2713";
+    color: var(--red);
+    margin-right: 8px;
+    font-weight: 800;
+}
+
+/* ---------- Sections ---------- */
+.section { padding-top: 60px; padding-bottom: 60px; }
+
+.section-title {
+    text-align: center;
+    font-size: 2.1rem;
+    color: var(--navy);
+    margin: 0 0 8px;
+}
+
+.section-title.light { color: #fff; margin-bottom: 30px; }
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--red);
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+.section-sub {
+    text-align: center;
+    color: #666;
+    margin: 12px 0 36px;
+}
+
+/* ---------- Service cards ---------- */
 .services {
     display: flex;
-    gap: 20px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    gap: 24px;
 }
+
 .service-card {
     flex: 1;
     background: #fff;
-    padding: 20px;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-body { padding: 20px; }
+
+.card-body h3 { margin: 0 0 8px; color: var(--navy); }
+
+.card-body p { margin: 0; }
+
+/* Photo slots: add images/car1.jpg, car2.jpg, car3.jpg. Gradients show until you do. */
+.card-photo {
+    height: 190px;
+    background-size: cover;
+    background-position: center;
+}
+
+.photo-1 {
+    background-image: url('images/car1.jpg'), linear-gradient(135deg, var(--navy), #0a3a73);
+}
+.photo-2 {
+    background-image: url('images/car2.jpg'), linear-gradient(135deg, #0a3a73, #1b5aa6);
+}
+.photo-3 {
+    background-image: url('images/car3.jpg'), linear-gradient(135deg, #8f1018, var(--red));
+}
+
+/* ---------- Process ---------- */
+.process {
+    background: var(--navy);
+    color: #fff;
+    padding: 40px 0 50px;
+}
+
+.steps {
+    display: flex;
+    gap: 30px;
+    text-align: center;
+}
+
+.step { flex: 1; }
+
+.step h3 { margin: 12px 0 6px; }
+
+.step p { margin: 0; color: #c9d6e6; }
+
+.step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--red);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/* ---------- Call to action band ---------- */
+.cta-band {
+    background: var(--light);
+    text-align: center;
+    border-bottom: 3px solid var(--red);
+}
+
+.cta-band .container { padding: 50px 0; }
+
+.cta-band h2 { color: var(--navy); font-size: 2rem; margin: 0 0 6px; }
+
+.cta-band p { margin: 0; }
+
+/* ---------- Contact page ---------- */
+.page-banner {
+    background: linear-gradient(135deg, var(--navy) 0%, #0a3a73 100%);
+    color: #fff;
+    text-align: center;
+    border-bottom: 4px solid var(--red);
+}
+
+.page-banner .container { padding: 50px 0; }
+
+.page-banner h2 { font-size: 2.5rem; margin: 0 0 8px; }
+
+.page-banner p { max-width: 650px; margin: 0 auto; color: #e6edf5; }
+
+.contact-page { padding-top: 50px; padding-bottom: 50px; }
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.contact-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    padding: 28px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border-color: var(--red);
+}
+
+.contact-card svg {
+    width: 44px;
+    height: 44px;
+    fill: var(--red);
+}
+
+.contact-card h3 { margin: 10px 0 4px; color: var(--navy); }
+
+.contact-card p { margin: 0; word-break: break-word; }
+
+.contact-note {
+    max-width: 650px;
+    margin: 50px auto 0;
+    text-align: center;
+}
+
+.brand-logo {
+    max-width: 180px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* ---------- Footer ---------- */
 footer {
     background: #222;
     color: #bbb;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 40px 0 20px;
+}
+
+footer h3 { color: #fff; margin: 0 0 8px; }
+
+footer p { margin: 4px 0; }
+
+footer a { text-decoration: none; }
+
+footer a:hover { color: #fff; text-decoration: underline; }
+
+.copyright {
     text-align: center;
-    padding: 30px 0;
+    border-top: 1px solid #3a3a3a;
+    margin: 0;
+    padding: 18px 0;
+    font-size: 0.9rem;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 800px) {
+    .services, .steps { flex-direction: column; }
+    .hero h2 { font-size: 2.1rem; }
+    .hero-overlay { padding: 60px 0; }
+    .brand span { font-size: 1.05rem; }
+    .site-header nav { gap: 14px; }
+    .site-header nav a:not(.btn):not(.back-link) { display: none; }
 }
