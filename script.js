@@ -82,4 +82,58 @@
             });
         });
     }
+
+    /* ---------- 4. Sign-up form: sends name + email to Jae without leaving the page ---------- */
+    var form = document.getElementById('signup-form');
+    var note = document.getElementById('form-note');
+
+    if (form && note && window.fetch) {
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // spam trap: real visitors never fill this in
+            if (form.elements['_honey'] && form.elements['_honey'].value) { return; }
+
+            var button = form.querySelector('button[type="submit"]');
+            var originalLabel = button.textContent;
+            button.disabled = true;
+            button.textContent = 'Sending...';
+            note.className = 'form-note';
+            note.textContent = '';
+
+            var payload = {
+                name: form.elements['name'].value.trim(),
+                email: form.elements['email'].value.trim(),
+                _subject: form.elements['_subject'].value,
+                _template: form.elements['_template'].value,
+                _captcha: 'false'
+            };
+
+            fetch('https://formsubmit.co/ajax/jae@jaesautomedia.com', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify(payload)
+            })
+                .then(function (response) {
+                    return response.json().then(function (data) {
+                        return { ok: response.ok, data: data };
+                    });
+                })
+                .then(function (result) {
+                    var success = result.ok && String(result.data.success) !== 'false';
+                    if (!success) { throw new Error('Send failed'); }
+                    form.reset();
+                    note.className = 'form-note ok';
+                    note.textContent = 'Thanks! Your details were sent and Jae will be in touch.';
+                })
+                .catch(function () {
+                    note.className = 'form-note err';
+                    note.textContent = 'Something went wrong. Please try again or email jae@jaesautomedia.com.';
+                })
+                .then(function () {
+                    button.disabled = false;
+                    button.textContent = originalLabel;
+                });
+        });
+    }
 })();

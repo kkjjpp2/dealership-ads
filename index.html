@@ -52,12 +52,25 @@
                         <a href="about.html">About</a>
                         <a href="contact.html">Contact</a>
                     </div>
-                    <p class="cut-sub">Meta advertising built for independent dealers</p>
-                    <div class="fields">
-                        <div class="field"><small>Platform</small><span>Meta Ads</span></div>
-                        <div class="field"><small>Focus</small><span>Independent Dealers</span></div>
-                        <a href="tel:7786839415" class="btn-red">Call 778-683-9415</a>
-                    </div>
+                    <p class="cut-sub">Leave your details and Jae will get back to you directly</p>
+                    <form class="signup" id="signup-form" action="https://formsubmit.co/jae@jaesautomedia.com" method="POST">
+                        <!-- hidden settings for the form service, plus a spam trap that real visitors never see -->
+                        <input type="text" name="_honey" class="trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+                        <input type="hidden" name="_subject" value="New sign-up from jaesautomedia.com">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        <label class="field">
+                            <small>Name</small>
+                            <input type="text" name="name" placeholder="Your name" autocomplete="name" required>
+                        </label>
+                        <label class="field">
+                            <small>Email</small>
+                            <input type="email" name="email" placeholder="you@dealership.com" autocomplete="email" required>
+                        </label>
+                        <button type="submit" class="btn-red">Sign up</button>
+                    </form>
+                    <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
+                    <p class="form-alt">Prefer to talk? <a href="tel:7786839415">Call 778-683-9415</a></p>
                 </div>
             </div>
 

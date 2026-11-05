@@ -265,6 +265,57 @@ a { color: inherit; }
 
 .field span { font-size: 0.8rem; font-weight: 700; }
 
+/* sign-up form inside the cut-out */
+.signup { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.signup .field {
+    display: block;
+    min-width: 190px;
+    cursor: text;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.signup .field:focus-within {
+    border-color: var(--red);
+    box-shadow: 0 0 0 3px rgba(179, 18, 28, 0.12);
+}
+
+.signup input[type="text"],
+.signup input[type="email"] {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--ink);
+}
+
+.signup input::placeholder { color: var(--soft); font-weight: 500; }
+
+.signup .trap { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+
+.signup button.btn-red { border: 0; font-family: inherit; cursor: pointer; }
+
+.signup button.btn-red:disabled { opacity: 0.7; cursor: progress; }
+
+.form-note { margin: 10px 0 0; min-height: 1.2em; font-size: 0.74rem; color: var(--gray); }
+
+.form-note.ok { color: var(--ink); font-weight: 700; }
+
+.form-note.ok::before { content: "\2713\00a0"; color: var(--red); }
+
+.form-note.err { color: var(--red); font-weight: 700; }
+
+.form-alt { margin: 4px 0 0; font-size: 0.74rem; color: var(--gray); }
+
+.form-alt a { color: var(--red); font-weight: 700; text-decoration: none; }
+
+.form-alt a:hover { text-decoration: underline; }
+
 .highlights {
     display: flex;
     flex-wrap: wrap;
@@ -623,7 +674,8 @@ a.card:hover,
     /* the strip becomes a normal block above the photo on small screens */
     .cutout { position: static; padding: 0 var(--pad) 22px; border-radius: 0; }
     .cutout::after { display: none; }
-    .fields .field, .fields .btn-red { flex: 1 1 100%; }
+    .fields .field, .fields .btn-red,
+    .signup .field, .signup .btn-red { flex: 1 1 100%; }
     .highlights { gap: 8px 22px; }
     .photo-work { margin-top: 40px; }
     .cta, .site-footer { margin-top: 0; }
