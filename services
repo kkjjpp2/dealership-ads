@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#05070b">
+    <title>Services | Jae's Auto Media</title>
+    <meta name="description" content="Inventory targeting, showroom retargeting and lead generation campaigns on Facebook and Instagram for independent car dealerships.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.jpg" alt="Jae's Auto Media Logo" class="nav-logo" onerror="this.style.display='none'">
+                <span class="logo-name">Jae's Auto Media</span>
+            </a>
+            <nav class="topnav" aria-label="Site pages">
+                <a href="index.html">Home</a>
+                <a href="services.html" aria-current="page">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="nav-cta">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-stage">
+        <div class="container">
+            <h1><span class="chrome-text">Our Services</span></h1>
+            <p>Three focused ways we put your inventory in front of local buyers on Facebook and Instagram.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+
+            <article class="service-detail">
+                <div class="detail-photo photo-1"><span class="card-tag">01</span></div>
+                <div class="detail-text">
+                    <h2>Digital Inventory Targeting</h2>
+                    <p>Put your specific vehicles in front of active car buyers in your local radius using dynamic social media ads.</p>
+                    <ul class="check-list">
+                        <li>Ads built around the vehicles you actually have on your lot</li>
+                        <li>Targeting set to your dealership's local area</li>
+                        <li>Placements on both Facebook and Instagram</li>
+                        <li>Ongoing adjustments as your inventory changes</li>
+                    </ul>
+                    <p class="best-for"><b>Best for:</b> dealers who want specific vehicles seen by nearby shoppers.</p>
+                </div>
+            </article>
+
+            <article class="service-detail reverse">
+                <div class="detail-photo photo-2"><span class="card-tag">02</span></div>
+                <div class="detail-text">
+                    <h2>Showroom Retargeting</h2>
+                    <p>Re-engage people who browsed your inventory but haven't booked a test drive yet.</p>
+                    <ul class="check-list">
+                        <li>Follow-up ads for people who looked at your vehicles online</li>
+                        <li>Reminders about the cars they were interested in</li>
+                        <li>A clear next step, like booking a test drive or sending a message</li>
+                        <li>Ad frequency kept reasonable so the ads help rather than annoy</li>
+                    </ul>
+                    <p class="best-for"><b>Best for:</b> dealers who get steady online interest and want to win back shoppers who haven't come in yet.</p>
+                </div>
+            </article>
+
+            <article class="service-detail">
+                <div class="detail-photo photo-3"><span class="card-tag">03</span></div>
+                <div class="detail-text">
+                    <h2>Lead Generation Campaigns</h2>
+                    <p>Capture inquiries straight from Facebook and Instagram so your sales team can follow up while buyers are interested.</p>
+                    <ul class="check-list">
+                        <li>Inquiry options right inside Facebook and Instagram</li>
+                        <li>Contact details sent to you so your team can respond quickly</li>
+                        <li>Campaigns aimed at inquiries and appointments, not just views</li>
+                        <li>Adjusted over time based on what is bringing in the best leads</li>
+                    </ul>
+                    <p class="best-for"><b>Best for:</b> dealers who want more inquiries and appointments on the books.</p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="cta-band">
+        <div class="container">
+            <h2 class="chrome-text">Not Sure Which Fits?</h2>
+            <p>Tell us about your lot and we'll recommend a plan that makes sense for your dealership.</p>
+            <a href="contact.html" class="btn">Get in Contact</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <h3>Jae's Auto Media</h3>
+                <p>Meta advertising for independent car dealerships.</p>
+            </div>
+            <div>
+                <h3>Explore</h3>
+                <p><a href="index.html">Home</a> &middot; <a href="services.html">Services</a></p>
+                <p><a href="about.html">About</a> &middot; <a href="contact.html">Contact</a></p>
+                <p><a href="legal.html">Legal</a></p>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p><a href="mailto:jae@jaesautomedia.com">jae@jaesautomedia.com</a></p>
+                <p><a href="tel:7786839415">778-683-9415</a></p>
+            </div>
+            <div>
+                <h3>Follow Us</h3>
+                <p>
+                    <a href="https://www.facebook.com/JaesAutoMedia" target="_blank" rel="noopener">Facebook</a> &middot;
+                    <a href="https://www.instagram.com/JaesAutoMedia" target="_blank" rel="noopener">Instagram</a>
+                </p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 Jae's Auto Media. All rights reserved. &middot; <a href="legal.html">Privacy Policy &amp; Terms</a></p>
+    </footer>
+
+    <div class="control-bar">
+        <a href="services.html"><span class="key a">A</span> Services</a>
+        <a href="index.html"><span class="key b">B</span> Home</a>
+        <a href="contact.html"><span class="key y">Y</span> Contact</a>
+    </div>
+</body>
+</html>
