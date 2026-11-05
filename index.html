@@ -3,34 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#05070b">
     <title>Jae's Auto Media | Meta Advertising for Independent Car Dealerships</title>
     <meta name="description" content="Facebook and Instagram advertising built for independent car dealerships. Put your inventory in front of local buyers and fill your lot with real leads.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container nav">
-            <a href="index.html" class="brand">
-                <img src="images/logo.jpg" alt="Jae's Auto Media Logo" class="nav-logo">
-                <span>Jae's Auto Media</span>
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.jpg" alt="Jae's Auto Media Logo" class="nav-logo" onerror="this.style.display='none'">
+                <span class="logo-name">Jae's Auto Media</span>
             </a>
-            <nav>
-                <a href="#services">Services</a>
-                <a href="#process">How It Works</a>
-                <a href="contact.html" class="btn btn-small">Contact Us</a>
-            </nav>
+            <div class="hud">
+                <span>Platform: <b>Meta Ads</b></span>
+                <span>Focus: <b>Independent Dealers</b></span>
+                <span>Call: <a href="tel:7786839415"><b>778-683-9415</b></a></span>
+            </div>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-overlay">
-            <div class="container hero-content">
+    <section class="stage">
+        <div class="container stage-inner">
+            <div class="find-us">
+                <span class="dot"></span>
+                <span>Find us on
+                    <a href="https://www.facebook.com/JaesAutoMedia" target="_blank" rel="noopener">Facebook</a> &middot;
+                    <a href="https://www.instagram.com/JaesAutoMedia" target="_blank" rel="noopener">Instagram</a>
+                </span>
+            </div>
+
+            <div class="title-block">
                 <p class="eyebrow">Advertising for Independent Dealerships</p>
-                <h2>Drive More Foot Traffic to Your Showroom</h2>
-                <p class="hero-sub">We run Facebook and Instagram ad campaigns that put your inventory in front of local car buyers and turn scrolling into test drives.</p>
-                <div class="hero-buttons">
-                    <a href="contact.html" class="btn">Get in Contact</a>
-                    <a href="#services" class="btn btn-outline">See What We Do</a>
+                <h1>
+                    <span class="chrome-text">Jae's</span>
+                    <span class="chrome-text second">Auto Media</span>
+                </h1>
+                <p class="tagline">Facebook and Instagram ad campaigns that put your inventory in front of local car buyers and turn scrolling into test drives.</p>
+            </div>
+
+            <nav class="game-menu" aria-label="Main menu">
+                <ul>
+                    <li><a href="#services">services</a></li>
+                    <li><a href="#process">how it works</a></li>
+                    <li><a href="https://www.facebook.com/JaesAutoMedia" target="_blank" rel="noopener">facebook</a></li>
+                    <li><a href="https://www.instagram.com/JaesAutoMedia" target="_blank" rel="noopener">instagram</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="container" style="position:relative;">
+            <div class="now-playing">
+                <div class="record" aria-hidden="true"></div>
+                <div>
+                    <span class="label">Now running</span>
+                    <span class="track">Meta ad campaigns for dealerships</span>
                 </div>
             </div>
         </div>
@@ -38,57 +66,65 @@
 
     <section class="trust-strip">
         <div class="container trust-items">
-            <span>Built for independent dealers</span>
-            <span>Facebook &amp; Instagram ads</span>
-            <span>Local, targeted reach</span>
-            <span>Direct line to the owner</span>
+            <span class="pill">Built for independent dealers</span>
+            <span class="pill">Facebook &amp; Instagram ads</span>
+            <span class="pill">Local, targeted reach</span>
+            <span class="pill">Direct line to the owner</span>
         </div>
     </section>
 
-    <section id="services" class="section container">
-        <h2 class="section-title">What We Do</h2>
-        <p class="section-sub">Simple, focused advertising that keeps your lot moving.</p>
-        <div class="services">
-            <div class="service-card">
-                <div class="card-photo photo-1"></div>
-                <div class="card-body">
-                    <h3>Digital Inventory Targeting</h3>
-                    <p>Put your specific vehicles in front of active car buyers in your local radius using dynamic social media ads.</p>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="card-photo photo-2"></div>
-                <div class="card-body">
-                    <h3>Showroom Retargeting</h3>
-                    <p>Re-engage people who browsed your inventory but haven't booked a test drive yet.</p>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="card-photo photo-3"></div>
-                <div class="card-body">
-                    <h3>Lead Generation Campaigns</h3>
-                    <p>Capture inquiries straight from Facebook and Instagram so your sales team can follow up while buyers are interested.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="process" class="process">
+    <section id="services" class="section">
         <div class="container">
-            <h2 class="section-title light">How It Works</h2>
+            <div class="section-heading">
+                <h2 class="chrome-text">What We Do</h2>
+                <div class="bar"></div>
+                <p>Simple, focused advertising that keeps your lot moving.</p>
+            </div>
+            <div class="services">
+                <div class="service-card">
+                    <div class="card-photo photo-1"><span class="card-tag">01</span></div>
+                    <div class="card-body">
+                        <h3>Digital Inventory Targeting</h3>
+                        <p>Put your specific vehicles in front of active car buyers in your local radius using dynamic social media ads.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="card-photo photo-2"><span class="card-tag">02</span></div>
+                    <div class="card-body">
+                        <h3>Showroom Retargeting</h3>
+                        <p>Re-engage people who browsed your inventory but haven't booked a test drive yet.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="card-photo photo-3"><span class="card-tag">03</span></div>
+                    <div class="card-body">
+                        <h3>Lead Generation Campaigns</h3>
+                        <p>Capture inquiries straight from Facebook and Instagram so your sales team can follow up while buyers are interested.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="section process">
+        <div class="container">
+            <div class="section-heading">
+                <h2 class="chrome-text">How It Works</h2>
+                <div class="bar"></div>
+            </div>
             <div class="steps">
                 <div class="step">
-                    <span class="step-num">1</span>
+                    <span class="step-num">STAGE 1</span>
                     <h3>We Talk</h3>
                     <p>Tell us about your lot, your inventory and the buyers you want to reach.</p>
                 </div>
                 <div class="step">
-                    <span class="step-num">2</span>
+                    <span class="step-num">STAGE 2</span>
                     <h3>We Build</h3>
                     <p>We design and launch ad campaigns tailored to your dealership and local market.</p>
                 </div>
                 <div class="step">
-                    <span class="step-num">3</span>
+                    <span class="step-num">STAGE 3</span>
                     <h3>You Sell</h3>
                     <p>Leads and walk-ins come to you, and we keep tuning the ads to improve results.</p>
                 </div>
@@ -98,7 +134,7 @@
 
     <section class="cta-band">
         <div class="container">
-            <h2>Ready to Move More Metal?</h2>
+            <h2 class="chrome-text">Ready to Move More Metal?</h2>
             <p>Reach out for a custom Meta advertising plan for your dealership.</p>
             <a href="contact.html" class="btn">Contact Us Today</a>
         </div>
@@ -118,12 +154,18 @@
             <div>
                 <h3>Follow Us</h3>
                 <p>
-                    <a href="https://www.facebook.com/profile.php?id=61595789626539" target="_blank" rel="noopener">Facebook</a> &middot;
-                    <a href="https://www.instagram.com/jaesautomediaads/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.facebook.com/JaesAutoMedia" target="_blank" rel="noopener">Facebook</a> &middot;
+                    <a href="https://www.instagram.com/JaesAutoMedia" target="_blank" rel="noopener">Instagram</a>
                 </p>
             </div>
         </div>
         <p class="copyright">&copy; 2026 Jae's Auto Media. All rights reserved.</p>
     </footer>
+
+    <div class="control-bar">
+        <a href="#services"><span class="key a">A</span> Services</a>
+        <a href="index.html"><span class="key b">B</span> Home</a>
+        <a href="contact.html"><span class="key y">Y</span> Contact</a>
+    </div>
 </body>
 </html>
