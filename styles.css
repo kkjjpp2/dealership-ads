@@ -74,6 +74,8 @@ body::after {
     font-style: italic;
     text-transform: uppercase;
     letter-spacing: 1px;
+    /* extra side padding so the slanted last letter isn't clipped by the gradient text mask */
+    padding: 0 0.2em 0.06em;
     background: linear-gradient(
         180deg,
         #ffffff 0%,
