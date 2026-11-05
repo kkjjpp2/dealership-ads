@@ -384,6 +384,7 @@ a { color: inherit; }
 .photo-1 { background-image: url('images/car1.jpg'), linear-gradient(135deg, #0a0203, #4a0509 55%, #b3121c); }
 .photo-2 { background-image: url('images/car2.jpg'), linear-gradient(135deg, #1b0305, #6e0a10 55%, #d9232d); }
 .photo-3 { background-image: url('images/car3.jpg'), linear-gradient(135deg, #0a0203, #8e0e15 55%, #d9232d); }
+.photo-4 { background-image: url('images/car4.jpg'), linear-gradient(135deg, #1b0305, #4a0509 55%, #b3121c); }
 
 /* About photo: put your picture at images/about.jpg */
 .photo-about { background-image: url('images/about.jpg'), linear-gradient(135deg, #0a0203, #4a0509 55%, #b3121c); }
